@@ -1,0 +1,28 @@
+.home__content-card {
+    margin-top: 25px;
+    width: 480px;
+    height: 300px;
+    border: 1px solid #FFF;
+    padding: 10px 15px;
+
+    &-video {
+        width: 230px;
+        height: 150px;
+    }
+
+    &-title {
+        margin-top: 10px;
+        font-size: 24px;
+    }
+
+    hr {
+        margin-top: 5px;
+    }
+
+    &-description {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 36px;
+    }
+}

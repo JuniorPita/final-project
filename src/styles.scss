@@ -1,3 +1,13 @@
+// Биндинг Переменных
+:root {
+    --hue: 0; // Основа
+
+    --bg-color: hsl(var(--hue), 0%, 17%);
+    --accent-color: hsl(var(--hue), 74%, 59%);
+    --accent-alt-color: hsl(var(--hue), 46%, 59%);
+    --white-color: hsl(var(--hue), 100%, 100%);
+}
+
 // Базовые Стили
 *,
 ::before,
@@ -12,12 +22,12 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    background-color: #000;
+    background-color: var(--bg-color);
     color: #FFF;
-    transition: .3s ease-in-out all;
 }
 
 h1,
@@ -40,4 +50,25 @@ a {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.container {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+// Бинд Унивесальных Стилей
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 8px;
+    transition: .3s ease-in-out all;
+
+    &-thumb {
+        background-color: grey;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: var(--accent-alt-color);
+        }
+    }
 }
