@@ -1,0 +1,37 @@
+<section class="video">
+    <div class="video__container container">
+        <div class="video__content"></div>
+
+        <h3 class="video__title">Title</h3>
+        <p class="video__description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nostrum dolores eaque totam numquam vero corporis consectetur rerum ut porro.
+        </p>
+
+        <div class="video__submit">
+            <div class="video__submit-form" id="form">
+                <span class="video__submit-form-subtitle">Leave a comment</span>
+                <label>
+                    <textarea required name="text" class="video__submit-form-input" type="text"></textarea>
+                </label>
+
+                <span class="video__submit-form-name">Your Name</span>
+                <label>
+                    <input required class="video__submit-form-user" type="text"/>
+                </label>
+            </div>
+    
+            <div class="video__submit-btns" id="btns">
+                <button class="video__submit-btns-btn btn-back">Back</button>
+                <button class="video__submit-btns-btn btn-save">Save</button>
+            </div>
+            
+            <div class="video__submit-comments" id="comments">
+                <h4 class="video__submit-comments-title">Comments:</h4>
+
+                <ul class="video__submit-comments-list">
+                    <app-comments></app-comments>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
