@@ -13,7 +13,8 @@
 
 .nav {
     &__container {
-        margin: 10px 400px;
+        margin: 10px auto;
+        max-width: 1280px;
     }
 
     &__list {

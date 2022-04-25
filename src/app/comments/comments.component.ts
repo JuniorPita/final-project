@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Comment} from '../domain/Comment';
 
 @Component({
   selector: 'app-comments',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
+
+  public publishedDate: number = Date.now()
+
+  public User: Comment = {
+    name: 'Lesha',
+    status: 'Guest',
+    date: this.publishedDate,
+    text: 'Some Comment'
+  }
 
   ngOnInit(): void {
   }
-
 }
