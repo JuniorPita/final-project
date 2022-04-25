@@ -1,22 +1,30 @@
 <div class="wrapper">
-    <app-header></app-header>
-
-    <main class="main" id="main">
-        <section class="home">
-            <div class="home__container container">
-                <h1 class="home__title">Welcome, Let's Search!</h1>
-
-                <div class="home__content">
-                    <!-- Первая подборка -->
-                    <div class="home__content-first">
-                        <h2 class="home__content-title">The Most Popular Videos</h2>
-
-                        <div class="home__content-cards">
-                            
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <ul class="nav__list">
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" routerLink="/">
+                            <i class='bx bxs-video nav__icon'></i>
+                        </a>
+                    </li>
+        
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" routerLink="/videos">
+                            Videos
+                        </a>
+                    </li>
+        
+                    <li class="nav__list-item">
+                        <div class="nav__list-input">
+                            <span class="nav__list-input-icon"><i class='bx bx-search-alt nav__icon'></i></span>
+                            <input type="search" id="search" placeholder="Search..." class="nav__list-input"/>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
-        </section>
-    </main>
+        </nav>
+    </header>
 </div>
+
+<router-outlet></router-outlet>
