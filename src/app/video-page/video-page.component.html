@@ -9,15 +9,17 @@
 
         <div class="video__submit">
             <div class="video__submit-form" id="form">
-                <span class="video__submit-form-subtitle">Leave a comment</span>
-                <label>
-                    <textarea required name="text" class="video__submit-form-input" type="text"></textarea>
-                </label>
+                <form [formGroup]="form">
+                    <span class="video__submit-form-subtitle">Leave a comment</span>
+                    <label>
+                        <textarea required name="text" class="video__submit-form-input" type="text" formControlName="text"></textarea>
+                    </label>
 
-                <span class="video__submit-form-name">Your Name</span>
-                <label>
-                    <input required class="video__submit-form-user" type="text"/>
-                </label>
+                    <span class="video__submit-form-name">Your Name</span>
+                    <label>
+                        <input required class="video__submit-form-user" type="text" formControlName="name"/>
+                    </label>
+                </form>
             </div>
     
             <div class="video__submit-btns" id="btns">

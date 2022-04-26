@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {Video} from '../domain/Videos';
-import {VideosService} from '../videos.service';
 
 @Component({
   selector: 'app-video-card',
@@ -9,17 +8,9 @@ import {VideosService} from '../videos.service';
 })
 export class VideoCardComponent implements OnInit {
 
-  constructor(private videoService: VideosService) {}
-
-  getVideo(): void {
-    this.videoService.getVideo().subscribe((videos) => {this.videos = videos})
-  }
-
-  public videos?: Video[]
+  constructor() {}
 
   ngOnInit(): void {
-    this.getVideo()
-    console.log(this.getVideo())
   }
 
 }

@@ -1,6 +1,6 @@
 .comments {
     &__container {
-        margin-top: 40px;
+        margin-top: 20px;
         width: 600px;
         height: 300px;
         display: grid;
@@ -11,7 +11,6 @@
         "comText comText comText";
         column-gap: 40px;
         row-gap: 0;
-        border: 1px solid #FFF;
         padding: 20px 40px;
     }
 
@@ -45,7 +44,7 @@
 
     &__content {
         grid-area: comText;
-        border: 1px solid #FFF;
+        border: 1px solid grey;
         padding: 10px;
         font-size: 12px;
         font-weight: 300;

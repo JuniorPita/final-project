@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {FormGroup, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-video-page',
@@ -8,6 +9,12 @@ import {Component, OnInit} from '@angular/core';
 export class VideoPageComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.form.value)
+  }
 
+  public form = new FormGroup({
+    name: new FormControl('Your Name'),
+    text: new FormControl('Comment Text')
+  })
 }
