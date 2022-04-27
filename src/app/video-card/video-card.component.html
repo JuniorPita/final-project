@@ -1,15 +1,15 @@
 <article class="home__content-card">
     <div class="home__content-card-video">
-        <img src="{{1}}" alt="Video Image"/>
+        <img src="{{video.video_pictures[0].picture}}" alt="Video Image"/>
     </div>
 
-    <h3 class="home__content-card-title">{{1}}</h3>
+    <h3 class="home__content-card-author">{{video.user.name}}</h3>
 
     <hr/>
 
     <div class="home__content-card-info">
-        <span class="home__content-card-info-description">{{1}}</span>
+        <span class="home__content-card-info-description">That video was provided by Pexels</span>
 
-        <button class="home__content-card-info-btn" routerLink="/video/{{1}}">Show</button>
+        <button class="home__content-card-info-btn" routerLink="/video/{{video.id}}">Show</button>
     </div>
 </article>

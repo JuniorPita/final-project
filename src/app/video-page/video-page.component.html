@@ -1,11 +1,23 @@
 <section class="video">
     <div class="video__container container">
-        <div class="video__content"></div>
+        <div class="video__content">
+            <h3 class="video__content-title">
+                <a href="{{video.user.url}}" target="_blank">
+                    <span>Author:</span>
+                    {{video.user.name}}
+                </a>
+            </h3>
 
-        <h3 class="video__title">Title</h3>
-        <p class="video__description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nostrum dolores eaque totam numquam vero corporis consectetur rerum ut porro.
-        </p>
+            <video
+            autoplay
+            controls
+            class="video__content-video"
+            src="{{video.video_files[0].link}}"
+            width="1280"
+            height="720"
+            >
+            </video>
+        </div>
 
         <div class="video__submit">
             <div class="video__submit-form" id="form">

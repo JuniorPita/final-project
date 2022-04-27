@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Video} from '../domain/Videos';
 
 @Component({
@@ -9,6 +9,8 @@ import {Video} from '../domain/Videos';
 export class VideoCardComponent implements OnInit {
 
   constructor() {}
+
+  @Input() video: any = {};
 
   ngOnInit(): void {
   }

@@ -15,9 +15,19 @@
     &-video {
         width: 230px;
         height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        img {
+            display: block;
+            width: 300px;
+            height: 150px;
+        }
     }
 
-    &-title {
+    &-author {
         margin-top: 10px;
         font-size: 24px;
         text-transform: uppercase;

@@ -1,0 +1,15 @@
+// Стили для блока 'Videos'
+.videos {
+    &__container {
+        margin-top: 70px;
+        margin-bottom: 100px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+}
