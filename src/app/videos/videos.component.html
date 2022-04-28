@@ -1,7 +1,13 @@
 <section class="videos">
     <div class="videos__container container">
-        <div class="videos__content">
-            <app-video-card *ngFor="let video of videos" [video]="video"></app-video-card>
-        </div>
+        <ng-container *ngIf="!isFirstLoad">
+            <div class="videos__content">
+                <app-video-card *ngFor="let video of videos" [video]="video"></app-video-card>
+            </div>
+
+            <div *ngIf="isLoading" class="spinner-container">
+                <span class="spinner"></span>
+            </div>
+        </ng-container>
     </div>
 </section>

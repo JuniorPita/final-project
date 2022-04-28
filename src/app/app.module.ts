@@ -8,7 +8,7 @@ import {CommentsComponent} from './comments/comments.component';
 import {VideosComponent} from './videos/videos.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgsRevealModule} from 'ngx-scrollreveal';
 
 @NgModule({
@@ -25,7 +25,8 @@ import {NgsRevealModule} from 'ngx-scrollreveal';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgsRevealModule
+    NgsRevealModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

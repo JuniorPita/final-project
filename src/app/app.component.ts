@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {VideosService} from './videos.service';
 
 @Component({
@@ -7,6 +7,11 @@ import {VideosService} from './videos.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor() {
+  public videos: any = []
+
+  @Input()
+  public search: any = ''
+
+  constructor(private service: VideosService) {
   }
 }
