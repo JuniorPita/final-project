@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {COMMENT} from '../comments';
 import {Comment} from '../domain/Comment';
 
 @Component({
@@ -16,10 +15,6 @@ export class CommentsComponent implements OnInit {
   public publishedDate: number = Date.now()
   public text = ''
 
-  public User: Comment[] = COMMENT
-
   ngOnInit(): void {
-    console.log(this.User)
-    console.log(this.name)
   }
 }

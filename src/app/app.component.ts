@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {VideosService} from './videos.service';
 
 @Component({
@@ -9,8 +9,15 @@ import {VideosService} from './videos.service';
 export class AppComponent {
   public videos: any = []
 
-  @Input()
   public search: any = ''
+
+  public bla() {
+    if (this.search !== '') {
+      this.service.searchQuery = this.search;
+    } else {
+      this.service.searchQuery = 'All';
+    }
+  }
 
   constructor(private service: VideosService) {
   }

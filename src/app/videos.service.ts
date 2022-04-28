@@ -11,7 +11,7 @@ export class VideosService {
   private headers = {
     // First Key - 563492ad6f91700001000001944a72a8b34f41c890bb0d5e79e6ee1e
     // Second Key - 563492ad6f917000010000016f07e56fdcad4a4f92efb8a2e909f1f3
-      'Authorization': '563492ad6f917000010000016f07e56fdcad4a4f92efb8a2e909f1f3'
+      'Authorization': '563492ad6f91700001000001944a72a8b34f41c890bb0d5e79e6ee1e'
     }
 
   private get(url: string, params: any = {}) {
@@ -20,19 +20,20 @@ export class VideosService {
 
   public pagPage: number = 12
   public curPage: number = 1
+  public searchQuery: any = 'All'
 
-  public getVideos(query: string = 'All') {
+  public getVideos() {
     return this.get('https://api.pexels.com/videos/search',
     {
-      'query': query,
+      'query': this.searchQuery,
       'per_page': this.pagPage,
       'page': this.curPage
     });
   }
 
-  public searchVideos(query: string = 'All') {
+  public searchVideos() {
     return this.get('https://api.pexels.com/videos/search', {
-      'query': query
+      'query': this.searchQuery
     });
   }
 

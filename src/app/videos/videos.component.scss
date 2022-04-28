@@ -72,3 +72,22 @@
         background-position: 468px 0;
     }
 }
+
+.modal {
+    position: relative;
+
+    &__title {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        font-size: 36px;
+        color: var(--accent-color);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+.hidden {
+    display: none!important;
+}

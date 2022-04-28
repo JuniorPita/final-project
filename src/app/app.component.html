@@ -18,7 +18,7 @@
                     <li class="nav__list-item">
                         <div class="nav__list-input">
                             <span class="nav__list-input-icon"><i class='bx bx-search-alt nav__icon'></i></span>
-                            <input type="search" id="search" placeholder="Search..." [(ngModel)]="search" class="nav__list-input"/>
+                            <input type="search" id="search" placeholder="Search..." [(ngModel)]="search" (keyup)="bla()" class="nav__list-input"/>
                         </div>
                     </li>
                 </ul>

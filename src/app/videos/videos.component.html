@@ -10,4 +10,8 @@
             </div>
         </ng-container>
     </div>
+
+    <div [ngClass]="('modal ' + (videos.length == 0? '' : 'hidden'))">
+        <h2 class="modal__title">Videos not found!</h2>
+    </div>
 </section>

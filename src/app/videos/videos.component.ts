@@ -12,8 +12,19 @@ export class VideosComponent implements OnInit {
   public isLoading = false
   public loadedAll = false
   public isFirstLoad = true
+  private oldQuery = ''
+  public modal: any
 
   constructor(private service: VideosService) {
+  }
+
+  ngDoCheck() {
+    if (this.oldQuery !== this.service.searchQuery) {
+      this.oldQuery = this.service.searchQuery;
+      this.videos = [];
+      this.loadedAll = false;
+      this.getVideos();
+    }
   }
 
   public getVideos(): void {
@@ -29,7 +40,11 @@ export class VideosComponent implements OnInit {
       this.isLoading = false;
       this.isFirstLoad = false;
 
-      // this.videos = data.videos;
+      // if (this.videos.length == 0) {
+      //   this.modal.classList.remove('hidden');
+      // } else {
+      //   this.modal.classList.add('hidden');
+      // }
     });
   }
 
