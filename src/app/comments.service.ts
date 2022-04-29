@@ -6,25 +6,22 @@ import {Comment} from './domain/Comment';
   providedIn: 'root'
 })
 export class CommentsService {
-
   private readonly _commentList$: BehaviorSubject<Comment[]> = new BehaviorSubject([] as Comment[])
   private comments: Comment[] = []
 
-  commentList$: Observable<Comment[]> = this._commentList$.asObservable();
+  commentList$: Observable<Comment[]> = this._commentList$.asObservable()
 
-  constructor() {}
-
-  public addComment(com: Comment) {
+  public addComment(com: Comment): void {
     this.comments.push(com);
     localStorage.setItem('comms', JSON.stringify(this.comments));
     this._commentList$.next(this.comments);
   }
 
-  public getComment(id: number) {
+  public getComment(id: number): any {
     return this.commentList$.pipe(map(items => items.filter(item => item.videoID === id)));
   }
 
-  public init() {
+  public init(): void {
     const value = JSON.parse(localStorage.getItem('comms') || '') || [];
 
     this.comments = value;

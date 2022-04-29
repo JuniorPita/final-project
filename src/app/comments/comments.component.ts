@@ -6,20 +6,17 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./comments.component.scss']
 })
 export class CommentsComponent implements OnInit {
-
-  constructor() {}
-
   @Input()
   public name = ''
 
   @Input()
   public src = ''
-  
-  public status = 'Guest'
-  public publishedDate: number = Date.now()
 
   @Input()
   public text = ''
+
+  public status = 'Guest'
+  public publishedDate: number = Date.now()
 
   ngOnInit(): void {
   }

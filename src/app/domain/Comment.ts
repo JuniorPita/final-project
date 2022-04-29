@@ -1,8 +1,8 @@
 export interface Comment {
     src: string,
-    name: any,
+    name: string,
     status: string,
-    publishedDate: any,
-    text: any,
+    publishedDate: string | number,
+    text: string,
     videoID: number
 }

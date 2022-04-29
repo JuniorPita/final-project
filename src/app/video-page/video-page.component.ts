@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
 import {VideosService} from '../videos.service';
 import {ActivatedRoute} from '@angular/router';
@@ -12,10 +12,10 @@ import {CommentsService} from '../comments.service';
 })
 export class VideoPageComponent implements OnInit {
   public video: any
-  
   public status: string = ''
   public publishedDate: any
   public videoID: number = 0
+  public commentList: any = this.commentService.commentList$
 
   constructor(private service: VideosService, private route: ActivatedRoute, private commentService: CommentsService) {
     this.route.params.subscribe(params => {
@@ -23,11 +23,6 @@ export class VideoPageComponent implements OnInit {
         this.video = data;
       });
     });
-  }
-
-  public commentList: any = this.commentService.commentList$
-
-  ngOnInit(): void {
   }
 
   public get name(): string {
@@ -42,7 +37,7 @@ export class VideoPageComponent implements OnInit {
     return this.form.get('src')?.value;
   }
 
-  public sendForm() {
+  public sendForm(): void {
     this.commentService.addComment({
       src: this.src ?? 'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png',
       name: this.name ?? 'Ivan',
@@ -57,4 +52,7 @@ export class VideoPageComponent implements OnInit {
     name: new FormControl('Your Name'),
     text: new FormControl('Comment Text')
   })
+
+  ngOnInit(): void {
+  }
 }

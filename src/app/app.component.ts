@@ -8,11 +8,9 @@ import {CommentsService} from './comments.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public videos: any = []
+  public search: string = ''
 
-  public search: any = ''
-
-  public bla() {
+  public searching(): void {
     if (this.search !== '') {
       this.service.searchQuery = this.search;
     } else {

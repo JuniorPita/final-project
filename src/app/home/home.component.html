@@ -9,7 +9,11 @@
                     <h2 class="home__content-title">The Most Popular Videos</h2>
 
                     <div class="home__content-cards">
-                        <app-video-card *ngFor="let video of popularVideos" [video]="video"></app-video-card>
+                        <app-video-card
+                        *ngFor="let video of popularVideos"
+                        [video]="video"
+                        >
+                        </app-video-card>
                     </div>
                 </div>
             </div>

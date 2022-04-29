@@ -1,33 +1,33 @@
-// Стили Для Блока 'Home'
-.home {
-    margin-top: 70px;
-    margin-bottom: 100px;
+// // Styles For 'Home'
+// .home {
+//     margin-top: 70px;
+//     margin-bottom: 100px;
 
-    &__title {
-        margin-top: 100px;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 36px;
-        letter-spacing: .055em;
-    }
+//     &__title {
+//         margin-top: 100px;
+//         text-align: center;
+//         text-transform: uppercase;
+//         font-size: 36px;
+//         letter-spacing: .055em;
+//     }
 
-    &__content {
-        margin-top: 75px;
+//     &__content {
+//         margin-top: 75px;
 
-        &-title {
-            text-transform: uppercase;
-            font-size: 26px;
-            font-weight: 500;
-            color: var(--accent-alt-color);
-            cursor: default;
-        }
+//         &-title {
+//             text-transform: uppercase;
+//             font-size: 26px;
+//             font-weight: 500;
+//             color: var(--accent-alt-color);
+//             cursor: default;
+//         }
 
-        &-cards {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            column-gap: 30px;
-        }
-    }
-}
+//         &-cards {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             flex-wrap: wrap;
+//             column-gap: 30px;
+//         }
+//     }
+// }

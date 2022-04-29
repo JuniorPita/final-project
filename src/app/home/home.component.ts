@@ -7,7 +7,7 @@ import {VideosService} from '../videos.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public popularVideos: any
+  public popularVideos? = []
 
   constructor(private service: VideosService) {
     this.service.getPopularVideos().subscribe((data: any) => {
@@ -17,5 +17,4 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

@@ -5,24 +5,24 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class VideosService {
+  public pagPage: number = 12
+  public curPage: number = 1
+  public searchQuery: string = 'All'
+
   constructor(private http: HttpClient) {
   }
 
   private headers = {
     // First Key - 563492ad6f91700001000001944a72a8b34f41c890bb0d5e79e6ee1e
     // Second Key - 563492ad6f917000010000016f07e56fdcad4a4f92efb8a2e909f1f3
-      'Authorization': '563492ad6f91700001000001944a72a8b34f41c890bb0d5e79e6ee1e'
+      'Authorization': '563492ad6f917000010000016f07e56fdcad4a4f92efb8a2e909f1f3'
     }
 
-  private get(url: string, params: any = {}) {
+  private get(url: string, params: any = {}): any {
     return this.http.get(url, {headers: this.headers, params: params});
   }
 
-  public pagPage: number = 12
-  public curPage: number = 1
-  public searchQuery: any = 'All'
-
-  public getVideos() {
+  public getVideos(): any {
     return this.get('https://api.pexels.com/videos/search',
     {
       'query': this.searchQuery,
@@ -31,17 +31,17 @@ export class VideosService {
     });
   }
 
-  public searchVideos() {
+  public searchVideos(): any {
     return this.get('https://api.pexels.com/videos/search', {
       'query': this.searchQuery
     });
   }
 
-  public getVideoInfo(id: number) {
+  public getVideoInfo(id: number): any {
     return this.get('https://api.pexels.com/videos/videos/' + id);
   }
 
-  public getPopularVideos() {
+  public getPopularVideos(): any {
     return this.get('https://api.pexels.com/videos/popular', {'per_page': 10});
   }
 }
