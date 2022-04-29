@@ -21,7 +21,7 @@
 
         <div class="video__submit">
             <div class="video__submit-form" id="form">
-                <form [formGroup]="form">
+                <form [formGroup]="form" (ngSubmit)="sendForm()">
                     <span class="video__submit-form-subtitle">Leave a comment</span>
                     <label>
                         <textarea required name="text" class="video__submit-form-input" type="text" formControlName="text"></textarea>
@@ -31,19 +31,26 @@
                     <label>
                         <input required class="video__submit-form-user" type="text" formControlName="name"/>
                     </label>
+
+                    <div class="video__submit-btns" id="btns">
+                        <button class="video__submit-btns-btn btn-save">Save</button>
+                    </div>
                 </form>
-            </div>
-    
-            <div class="video__submit-btns" id="btns">
-                <button class="video__submit-btns-btn btn-back">Back</button>
-                <button class="video__submit-btns-btn btn-save">Save</button>
             </div>
             
             <div class="video__submit-comments" id="comments">
                 <h4 class="video__submit-comments-title">Comments:</h4>
 
                 <ul class="video__submit-comments-list">
-                    <app-comments></app-comments>
+                    <ng-container *ngFor="let comment of commentList | async">
+                        <app-comments
+                        *ngIf="comment.videoID === video.id"
+                        [name]="comment.name"
+                        [text]="comment.text"
+                        [src]="comment.src"
+                        >
+                        </app-comments>
+                    </ng-container>
                 </ul>
             </div>
         </div>

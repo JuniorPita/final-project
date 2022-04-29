@@ -1,7 +1,8 @@
 export interface Comment {
-    id: number,
-    name: string,
+    src: string,
+    name: any,
     status: string,
-    date: number,
-    text: string
+    publishedDate: any,
+    text: any,
+    videoID: number
 }

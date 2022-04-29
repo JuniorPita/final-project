@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {VideosService} from './videos.service';
+import {CommentsService} from './comments.service';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ export class AppComponent {
     }
   }
 
-  constructor(private service: VideosService) {
+  constructor(private service: VideosService, private comments: CommentsService) {
+    this.comments.init();
   }
 }
