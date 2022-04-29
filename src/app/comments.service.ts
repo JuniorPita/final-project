@@ -22,9 +22,7 @@ export class CommentsService {
   }
 
   public init(): void {
-    const value = JSON.parse(localStorage.getItem('comms') || '') || [];
-
-    this.comments = value;
+    this.comments = JSON.parse(localStorage.getItem('comms') || '') || [];
     this._commentList$.next(this.comments);
   }
 }

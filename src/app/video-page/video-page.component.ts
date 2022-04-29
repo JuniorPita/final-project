@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
 import {VideosService} from '../videos.service';
 import {ActivatedRoute} from '@angular/router';
-import {__values} from 'tslib';
 import {CommentsService} from '../comments.service';
 
 @Component({
@@ -13,8 +12,6 @@ import {CommentsService} from '../comments.service';
 export class VideoPageComponent implements OnInit {
   public video: any
   public status: string = ''
-  public publishedDate: any
-  public videoID: number = 0
   public commentList: any = this.commentService.commentList$
 
   constructor(private service: VideosService, private route: ActivatedRoute, private commentService: CommentsService) {

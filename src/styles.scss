@@ -1,74 +1,139 @@
-// // Variables
-// :root {
-//     --hue: 0; // Main Color
+// Variables
+:root {
+    // Change main color
+    // Purple - 250, Green - 142, Blue - 230, Pink - 340, Red - 360 and etc
+    --hue-color: 200;
 
-//     --bg-color: hsl(var(--hue), 0%, 17%);
-//     --accent-color: hsl(var(--hue), 74%, 59%);
-//     --accent-alt-color: hsl(var(--hue), 46%, 59%);
-//     --white-color: hsl(var(--hue), 100%, 100%);
-// }
+    // HSL color mode
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 58%, 65%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
 
-// // Basic Styles
-// *,
-// ::before,
-// ::after {
-//     box-sizing: border-box;
-//     padding: 0;
-//     margin: 0;
-// }
+    --body-color: hsl(var(--hue-color), 34%, 58%);
+    --container-color: #FFF;
 
-// html {
-//     scroll-behavior: smooth;
-// }
+    --scroll-bar-color: hsl(var(--hue-color), 27%, 50%);
+    --scroll-thumb-color: hsl(var(--hue-color), 20%, 35%);
 
-// body {
-//     margin: 0 auto;
-//     padding: 0;
-//     font-family: 'Poppins', sans-serif;
-//     font-size: 16px;
-//     background-color: var(--bg-color);
-//     color: #FFF;
-// }
+    // Font and typography
+    --body-font: 'Poppins', sans-serif;
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//     font-weight: 700;
-// }
+    --big-font-size: 32px;
+    --h1-font-size: 24px;
+    --h2-font-size: 20px;
+    --h3-font-size: 18px;
+    --normal-font-size: 16px;
+    --small-font-size: 14px;
+    --smaller-font-size: 12px;
 
-// ul {
-//     list-style: none;
-// }
+    // Font weight
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+    --font-black: 900;
 
-// a {
-//     text-decoration: none;
-// }
+    // Margenes bottom
+    --mb-4: 4px;
+    --mb-8: 8px;
+    --mb-10: 10px;
+    --mb-12: 12px;
+    --mb-16: 16px;
+    --mb-32: 32px;
+    --mb-40: 40px;
+    --mb-48: 48px;
 
-// img {
-//     max-width: 100%;
-//     height: auto;
-// }
+    // Z-index
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
 
-// .container {
-//     margin-left: 200px;
-//     margin-right: 200px;
-// }
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 40px;
+        --h1-font-size: 32px;
+        --h2-font-size: 24px;
+        --h3-font-size: 20px;
+        --normal-font-size: 18px;
+        --small-font-size: 14px;
+        --smaller-font-size: 12px;
+    }
+}
 
-// // Layout Styles
-// ::-webkit-scrollbar {
-//     width: 10px;
-//     border-radius: 8px;
-//     transition: .3s ease-in-out all;
+// Basic Styles
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
-//     &-thumb {
-//         background-color: grey;
-//         border-radius: 8px;
+html {
+    scroll-behavior: smooth;
+}
 
-//         &:hover {
-//             background-color: var(--accent-alt-color);
-//         }
-//     }
-// }
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-image: url(https://bit.ly/1R1s2pM);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    color: #FFF;
+}
+
+h1 {
+    font-weight: var(--font-black);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+// Styles For Scroll
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 8px;
+    transition: .3s ease-in-out all;
+
+    &-thumb {
+        background-color: var(--scroll-bar-color);
+        border-radius: 4px;
+
+        &:hover {
+            background-color: var(--scroll-thumb-color);
+        }
+    }
+}

@@ -15,7 +15,7 @@ export class VideosService {
   private headers = {
     // First Key - 563492ad6f91700001000001944a72a8b34f41c890bb0d5e79e6ee1e
     // Second Key - 563492ad6f917000010000016f07e56fdcad4a4f92efb8a2e909f1f3
-      'Authorization': '563492ad6f917000010000016f07e56fdcad4a4f92efb8a2e909f1f3'
+      'Authorization': '563492ad6f91700001000001944a72a8b34f41c890bb0d5e79e6ee1e'
     }
 
   private get(url: string, params: any = {}): any {

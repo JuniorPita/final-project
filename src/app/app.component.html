@@ -1,30 +1,30 @@
 <div class="wrapper">
     <header class="header" id="header">
         <nav class="nav">
-            <div class="nav__container">
+            <div class="nav__container container">
                 <ul class="nav__list">
                     <li class="nav__list-item">
-                        <a class="nav__list-link" routerLink="/">
+                        <a class="nav__list-item-link" routerLink="/">
                             <i class='bx bxs-video nav__icon'></i>
                         </a>
                     </li>
         
                     <li class="nav__list-item">
-                        <a class="nav__list-link" routerLink="/videos">
+                        <a class="nav__list-item-link" routerLink="/videos">
                             Videos
                         </a>
                     </li>
         
                     <li class="nav__list-item">
-                        <div class="nav__list-input">
-                            <span class="nav__list-input-icon"><i class='bx bx-search-alt nav__icon'></i></span>
+                        <div class="nav__list-item-input">
+                            <span class="nav__list-item-input-icon"><i class='bx bx-search-alt nav__icon'></i></span>
                             <input
                             type="search"
                             id="search"
                             placeholder="Search: Nature or smth"
                             [(ngModel)]="search"
                             (keyup)="searching()"
-                            class="nav__list-input"
+                            class="nav__list-item-input-input"
                             />
                         </div>
                     </li>
