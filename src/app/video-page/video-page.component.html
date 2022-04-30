@@ -24,16 +24,20 @@
                 <form [formGroup]="form" (ngSubmit)="sendForm()">
                     <span class="video__submit-form-subtitle">Leave a comment</span>
                     <label>
-                        <textarea required name="text" class="video__submit-form-input" type="text" formControlName="text"></textarea>
+                        <div class="video__submit-form-text">
+                            <textarea required name="text" type="text" formControlName="text"></textarea>
+                        </div>
                     </label>
 
                     <span class="video__submit-form-name">Your Name</span>
                     <label>
-                        <input required class="video__submit-form-user" type="text" formControlName="name"/>
+                        <div class="video__submit-form-name">
+                            <input required type="text" formControlName="name"/>
+                        </div>
                     </label>
 
                     <div class="video__submit-form-btns" id="btns">
-                        <button class="video__submit-form-btns-btn btn-save">Save</button>
+                        <button class="video__submit-form-btns-btn">Save</button>
                     </div>
                 </form>
             </div>

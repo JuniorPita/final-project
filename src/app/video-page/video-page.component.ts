@@ -36,7 +36,7 @@ export class VideoPageComponent implements OnInit {
 
   public sendForm(): void {
     this.commentService.addComment({
-      src: this.src ?? 'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png',
+      src: this.src ?? 'https://images.pexels.com/photos/11784925/pexels-photo-11784925.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       name: this.name ?? 'Ivan',
       status: 'Guest',
       publishedDate: Date.now(),

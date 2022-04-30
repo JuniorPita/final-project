@@ -1,93 +1,62 @@
-// // Styles for 'Videos'
-// .videos {
-//     &__container {
-//         margin-top: 70px;
-//         margin-bottom: 100px;
-//     }
+// Styles for 'Videos'
+.videos {
+    &__container {
+        margin-top: 120px;
+        margin-bottom: 100px;
+    }
 
-//     &__content {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         flex-wrap: wrap;
-//         column-gap: 30px;
-//     }
-// }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
 
-// // Styles For Spinner
-// .spinner {
-//     width: 2.5rem;
-//     height: 2.5rem;
-//     border-top-color: #FFF;
-//     border-left-color: #FFF;
-//     animation: spinner 400ms linear infinite;
-//     border-bottom-color: transparent;
-//     border-right-color: transparent;
-//     border-style: solid;
-//     border-width: 2px;
-//     border-radius: 50%;
-//     margin: auto;
+// Styles For Spinner
+.spinner {
+    width: 40px;
+    height: 40px;
+    border-top-color: #FFF;
+    border-left-color: #FFF;
+    animation: spinner 400ms linear infinite;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+    margin: auto;
 
-//     &-container {
-//         display: flex;
-//         margin-top: 50px;
-//     }
-// }
+    &-container {
+        display: flex;
+        margin-top: var(--mb-48);
+    }
+}
 
-// @keyframes spinner {
-//     0% {
-//         transform: rotate(0deg);
-//     }
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
 
-//     100% {
-//         transform: rotate(360deg);
-//     }
-// }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
-// .shine {
-//     $shine-opacity: 5%;
-//     background: darken(#f6f7f8, $shine-opacity) linear-gradient(
-//         to right,
-//         darken(#f6f7f8, $shine-opacity) 0%,
-//         darken(#edeef1, $shine-opacity) 20%,
-//         darken(#f6f7f8, $shine-opacity) 40%,
-//         darken(#f6f7f8, $shine-opacity) 100%
-//     ) no-repeat;
-//     background-size: 800px 400px;
-//     display: inline-block;
-//     position: relative;
-//     animation-duration: 1s;
-//     animation-fill-mode: forwards;
-//     animation-iteration-count: infinite;
-//     animation-name: placeholder-shimmer;
-//     animation-timing-function: linear;
-// }
+.modal {
+    position: relative;
 
-// @keyframes placeholder-shimmer {
-//     0% {
-//         background-position: -468px 0;
-//     }
+    &__title {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        font-size: var(--big-font-size);
+        color: var(--text-color-light);
+        font-weight: var(--font-black);
+        text-transform: uppercase;
+    }
+}
 
-//     100% {
-//         background-position: 468px 0;
-//     }
-// }
-
-// .modal {
-//     position: relative;
-
-//     &__title {
-//         display: block;
-//         position: absolute;
-//         top: 50%;
-//         left: 40%;
-//         font-size: 36px;
-//         color: var(--accent-color);
-//         font-weight: 700;
-//         text-transform: uppercase;
-//     }
-// }
-
-// .hidden {
-//     display: none!important;
-// }
+.hidden {
+    display: none !important;
+}

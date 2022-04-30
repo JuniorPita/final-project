@@ -1,53 +1,50 @@
-// // Styles For Comments
-// .comments {
-//     &__container {
-//         margin-top: 20px;
-//         width: 600px;
-//         height: 300px;
-//         display: grid;
-//         grid-template-columns: .5fr 1fr .5fr;
-//         grid-template-rows: .5fr 1.5fr;
-//         grid-template-areas:
-//         "comImg comInfo comDate"
-//         "comText comText comText";
-//         column-gap: 40px;
-//         row-gap: 0;
-//         padding: 20px 40px;
-//     }
+// Styles For Comments
+.comments {
+    &__container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: .5fr 1fr .5fr;
+        grid-template-rows: .5fr 1.5fr;
+        grid-template-areas:
+        "comImg comInfo comDate"
+        "comText comText comText";
+        column-gap: 40px;
+        row-gap: 20px;
+    }
 
-//     &__img {
-//         grid-area: comImg;
-//         width: 100px;
-//         height: 100px;
-//     }
+    &__img {
+        grid-area: comImg;
+        
+        img {
+            object-fit: cover;
+            border-radius: 8px;
+            width: 80px;
+            height: 80px;
+        }
+    }
 
-//     &__info {
-//         grid-area: comInfo;
-//         display: flex;
-//         flex-direction: column;
+    &__info {
+        grid-area: comInfo;
+        display: flex;
+        flex-direction: column;
 
-//         &-name {
-//             font-size: 20px;
-//             font-weight: 500;
-//         }
+        &-name {
+            font-size: var(--h3-font-size);
+            font-weight: var(--font-medium);
+        }
 
-//         &-status {
-//             font-size: 10px;
-//             font-weight: 300;
-//         }
-//     }
+        &-status {
+            font-size: var(--smaller-font-size);
+            font-weight: var(--font-light);
+        }
+    }
 
-//     &__date {
-//         grid-area: comDate;
-//         font-size: 14px;
-//         font-weight: 300;
-//     }
-
-//     &__content {
-//         grid-area: comText;
-//         border: 1px solid grey;
-//         padding: 10px;
-//         font-size: 12px;
-//         font-weight: 300;
-//     }
-// }
+    &__content {
+        grid-area: comText;
+        border: 1px solid grey;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: var(--smaller-font-size);
+        font-weight: var(--font-light);
+    }
+}

@@ -7,15 +7,15 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class CommentsComponent implements OnInit {
   @Input()
-  public name = ''
+  public name: string = ''
 
   @Input()
-  public src = ''
+  public src: string = ''
 
   @Input()
-  public text = ''
+  public text: string = ''
 
-  public status = 'Guest'
+  public status: string = 'Guest'
   public publishedDate: number = Date.now()
 
   ngOnInit(): void {
