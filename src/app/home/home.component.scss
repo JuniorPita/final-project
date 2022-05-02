@@ -100,3 +100,155 @@
         filter: blur(0);
     }
 }
+
+// Media Queries
+// For small devices
+@media screen and (max-width: 359px) {
+    .home {
+        margin-top: 40px;
+        margin-bottom: 25px;
+
+        &__container {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__content {
+            margin-top: 40px;
+
+            &-title {
+                margin-left: 0;
+                text-align: center;
+                font-size: var(--h3-font-size);
+            }
+
+            &-cards {
+                margin-top: 50px;
+            }
+        }
+
+        &__title {
+            margin-top: 0;
+            font-size: var(--h1-font-size);
+        }
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .home {
+        margin-top: 40px;
+        margin-bottom: 25px;
+
+        &__container {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__content {
+            margin-top: 40px;
+
+            &-title {
+                margin-left: 0;
+                text-align: center;
+                font-size: var(--h3-font-size);
+            }
+
+            &-cards {
+                margin-top: 30px;
+                gap: 20px;
+            }
+        }
+
+        &__title {
+            margin-top: 0;
+            font-size: var(--big-font-size);
+        }
+    }
+}
+
+// For medium devices
+@media screen and (min-width: 576px) {
+    .home {
+        &__content {
+            margin-top: 20px;
+
+            &-cards {
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .home {
+        &__content {
+            &-cards {
+                margin-top: 40px;
+                column-gap: 30px;
+            }
+        }
+    }
+}
+
+// For large devices
+@media screen and (min-width: 968px){
+    .home {
+        &__container {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        &__content {
+            &-title {
+                font-size: var(--h2-font-size);
+            }
+
+            &-cards {
+                margin-top: 60px;
+                column-gap: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .home {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .home {
+        &__content {
+            margin-top: 40px;
+
+            &-cards {
+                margin-top: 100px;
+                column-gap: 60px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .home {
+        margin-top: 120px;
+
+        &__container {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        &__title {
+            font-size: 46px;
+        }
+
+        &__content {
+            margin-top: 50px;
+
+            &-title {
+                font-size: var(--h1-font-size);
+            }
+        }
+    }
+}

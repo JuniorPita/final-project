@@ -118,11 +118,6 @@ img {
     height: auto;
 }
 
-.container {
-    margin-left: 400px;
-    margin-right: 400px;
-}
-
 // Styles For Scroll
 ::-webkit-scrollbar {
     width: 10px;
@@ -136,5 +131,94 @@ img {
         &:hover {
             background-color: var(--scroll-thumb-color);
         }
+    }
+}
+
+// Media Queries
+// For small devices
+@media screen and (max-width: 359px) {
+    body {
+        width: 320px;
+        overflow-x: hidden;
+    }
+
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    body {
+        width: 360px;
+        overflow-x: hidden;
+    }
+
+    .container {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+// For medium devices
+@media screen and (min-width: 576px) {
+    body {
+        width: 576px;
+    }
+
+    .container {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    body {
+        width: 767px;
+    }
+
+    .container {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}
+
+// For large devices
+@media screen and (min-width: 968px){
+    body {
+        width: 968px;
+    }
+
+    .container {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        width: 1024px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    body {
+        width: 1280px;
+    }
+
+    .container {
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    body {
+        width: 1920px;
+    }
+
+    .container {
+        margin-left: 380px;
+        margin-right: 380px;
     }
 }

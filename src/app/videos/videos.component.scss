@@ -60,3 +60,101 @@
 .hidden {
     display: none !important;
 }
+
+// Media Queries
+// For small devices
+@media screen and (max-width: 359px) {
+    .videos {
+        &__container {
+            margin: 40px;
+        }
+    
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 0;
+            row-gap: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .videos {
+        &__container {
+            margin: 40px 60px;
+        }
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 0;
+            row-gap: 40px;
+        }
+    }
+}
+
+// For medium devices
+@media screen and (min-width: 576px) {
+    .videos {
+        &__container {
+            margin: 40px;
+        }
+
+        &__content {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 10px;
+            row-gap: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .videos {
+        &__container {
+            margin: 40px 70px;
+        }
+
+        &__content {
+            column-gap: 20px;
+        }
+    }
+}
+
+// For large devices
+@media screen and (min-width: 968px){
+    .videos {
+        &__content {
+            column-gap: 40px;
+            row-gap: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .videos {
+        &__container {
+            margin-top: 120px;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .videos {
+        &__content {
+            gap: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .videos {
+        &__container {
+            margin: 120px;
+        }
+
+        &__content {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+    }
+}

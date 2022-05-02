@@ -103,3 +103,30 @@
         }
     }
 }
+
+// Media Queries
+// For small devices
+@media screen and (max-width: 359px) {
+    .header {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .header {
+        display: none;
+    }
+}
+
+// For medium devices
+@media screen and (min-width: 576px) {
+    .header {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        display: block;
+    }
+}

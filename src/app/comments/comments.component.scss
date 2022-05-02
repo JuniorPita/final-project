@@ -48,3 +48,137 @@
         font-weight: var(--font-light);
     }
 }
+
+// Media Queries
+// For small devices
+@media screen and (max-width: 359px) {
+    .comments {
+        &__container {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+            "comImg"
+            "comInfo"
+            "comDate"
+            "comText";
+            gap: 0;
+        }
+    
+        &__img {
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    
+        &__info {
+            &-name {
+                font-size: var(--normal-font-size);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .comments {
+        &__container {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+            "comImg"
+            "comInfo"
+            "comDate"
+            "comText";
+            gap: 0;
+        }
+    
+        &__img {
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    
+        &__info {
+            &-name {
+                font-size: var(--normal-font-size);
+            }
+        }
+    }
+}
+
+// For medium devices
+@media screen and (min-width: 576px) {
+    .comments {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas:
+            "comImg comInfo"
+            "comDate comText";
+            gap: 0;
+        }
+    
+        &__info {
+            &-name {
+                font-size: var(--h3-font-size);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .comments {
+        &__img {
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        &__info {
+            &-name {
+                font-size: var(--h2-font-size);
+            }
+        }
+    }
+}
+
+// For large devices
+@media screen and (min-width: 1024px) {
+    .comments {
+        &__container {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas:
+            "comImg comInfo comDate"
+            "comText comText comText";
+            gap: 10px;
+        }
+    
+        &__info {
+            &-name {
+                font-size: var(--h2-font-size);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .comments {
+        &__container {
+            margin-top: var(--mb-32);
+            gap: 20px;
+        }
+    
+        &__info {
+            &-name {
+                font-size: var(--h1-font-size);
+            }
+        }
+    }
+}
