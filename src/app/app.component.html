@@ -2,20 +2,24 @@
     <header class="header" id="header">
         <nav class="nav">
             <div class="nav__container container">
+                <div class="nav__toggle" (click)="toggleMenu()">
+                    <i class='bx bx-menu nav__toggle-icon'></i>
+                </div>
+
                 <ul class="nav__list">
-                    <li class="nav__list-item">
+                    <li class="nav__list-item" (click)="removeMenu()">
                         <a class="nav__list-item-link" routerLink="/">
                             <i class='bx bxs-video nav__icon'></i>
                         </a>
                     </li>
         
-                    <li class="nav__list-item">
+                    <li class="nav__list-item" (click)="removeMenu()">
                         <a class="nav__list-item-link" routerLink="/videos">
                             Videos
                         </a>
                     </li>
         
-                    <li class="nav__list-item">
+                    <li class="nav__list-item" (keydown.enter)="removeMenu()">
                         <div class="nav__list-item-input">
                             <span class="nav__list-item-input-icon"><i class='bx bx-search-alt nav__icon'></i></span>
                             <input

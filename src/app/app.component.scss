@@ -12,6 +12,7 @@
 // Styles For 'Nav'
 .nav {
     &__container {
+        position: relative;
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -102,31 +103,107 @@
             }
         }
     }
+
+    &__toggle {
+        cursor: pointer;
+        font-size: var(--big-font-size);
+        display: none;
+        position: fixed;
+        top: -100%;
+        z-index: var(--z-fixed);
+        color: #FFF;
+        transition: .3s ease-in-out;
+    }
+
+    &__list.toggle {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: var(--z-fixed);
+        padding: 10px 20px;
+        transition: .5s ease-in-out;
+    }
+}
+
+// For Burger Visibility
+@media screen and (max-width: 1023px) {
+    .nav {
+        &__toggle {
+            display: block;
+            top: 20px;
+            right: 20px;
+        }
+
+        &__list {
+            transform: translateY(-300%);
+        }
+    }
 }
 
 // Media Queries
 // For small devices
 @media screen and (max-width: 359px) {
     .header {
-        display: none;
+        backdrop-filter: none;
+    }
+
+    .nav {
+        &__list.toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 20px;
+            transform: translateY(0);
+            transform: translateX(0);
+            backdrop-filter: blur(5px);
+            padding: 20px 20px;
+        }
+
+        &__list {
+            &-item {
+                &-input {
+                    width: 25%;
+                }
+            }
+        }
     }
 }
 
 @media screen and (min-width: 360px) {
     .header {
-        display: none;
+        backdrop-filter: none;
     }
-}
 
-// For medium devices
-@media screen and (min-width: 576px) {
-    .header {
-        display: none;
+    .nav {
+        &__list.toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 20px;
+            transform: translateY(0);
+            transform: translateX(0);
+            backdrop-filter: blur(5px);
+            padding: 20px 20px;
+        }
+
+        &__list {
+            &-item {
+                &-input {
+                    width: 25%;
+                }
+            }
+        }
     }
 }
 
 @media screen and (min-width: 1024px) {
+    .nav__list {
+        display: flex;
+    }
+
     .header {
-        display: block;
+        backdrop-filter: blur(5px);
     }
 }

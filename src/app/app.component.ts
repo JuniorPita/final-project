@@ -10,6 +10,18 @@ import {CommentsService} from './comments.service';
 export class AppComponent {
   public search: string = ''
 
+  public toggleMenu(): void {
+    const list = document.querySelector('.nav__list');
+
+    list?.classList.toggle('toggle');
+  }
+
+  public removeMenu(): void {
+    const list = document.querySelector('.nav__list');
+
+    list?.classList.remove('toggle');
+  }
+
   public searching(): void {
     if (this.search !== '') {
       this.service.searchQuery = this.search;
